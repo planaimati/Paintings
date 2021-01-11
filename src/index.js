@@ -2,10 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Root from "./views/Root";
 import reportWebVitals from "./reportWebVitals";
+import { AppContextProvider } from "./context/context.js";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Root />
+    <AppContextProvider>
+      <Root />
+    </AppContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
