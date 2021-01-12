@@ -16,6 +16,10 @@ html {
     padding: 0;
     font-size: 1.6rem;
     font-family:  sans-serif;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    
   }
 
 

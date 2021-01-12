@@ -1,16 +1,28 @@
 import React, { useContext } from "react";
 import Theme from "../theme/Theme.js";
 import GlobalStyle from "../theme/GlobalStyle";
-import { AppContext } from "../context/context";
+
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import HomeView from "./HomeView";
+import GalleryView from "./GalleryView";
+import AboutView from "./AboutView";
+import MenuTemplate from "../templates/MenuTemplate";
+import Burger from "../components/Burger";
 
 const Root = () => {
-  const { xd } = useContext(AppContext);
-
-  console.log(xd);
   return (
     <Theme>
-      <GlobalStyle />
-      <div>hello from app</div>;
+      <BrowserRouter>
+        <GlobalStyle />
+
+        <MenuTemplate></MenuTemplate>
+        <Burger></Burger>
+        <Switch>
+          <Route exact path="/" component={HomeView}></Route>
+          <Route exact path="/gallery" component={GalleryView}></Route>
+          <Route exact path="/about" component={AboutView}></Route>
+        </Switch>
+      </BrowserRouter>
     </Theme>
   );
 };
