@@ -1,0 +1,164 @@
+{
+  "name": "sklep BallerBay",
+  "description": "",
+  "displayField": "desc",
+  "fields": [
+    {
+      "id": "id",
+      "name": "id",
+      "type": "Integer",
+      "localized": false,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "desc",
+      "name": "desc",
+      "type": "Text",
+      "localized": false,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "img",
+      "name": "img",
+      "type": "Link",
+      "localized": false,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false,
+      "linkType": "Asset"
+    },
+    {
+      "id": "title",
+      "name": "title",
+      "type": "Symbol",
+      "localized": false,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "amount",
+      "name": "amount",
+      "type": "Integer",
+      "localized": false,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "price",
+      "name": "price",
+      "type": "Integer",
+      "localized": false,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "designer",
+      "name": "designer",
+      "type": "Symbol",
+      "localized": false,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "size",
+      "name": "size",
+      "type": "Symbol",
+      "localized": false,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "color",
+      "name": "color",
+      "type": "Symbol",
+      "localized": false,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "avilable",
+      "name": "avilable",
+      "type": "Boolean",
+      "localized": false,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    },
+    {
+      "id": "delivery",
+      "name": "delivery",
+      "type": "Text",
+      "localized": false,
+      "required": false,
+      "validations": [],
+      "disabled": false,
+      "omitted": false
+    }
+  ],
+  "sys": {
+    "space": {
+      "sys": {
+        "type": "Link",
+        "linkType": "Space",
+        "id": "z1dm4uzqa2b2"
+      }
+    },
+    "id": "sklepBallerBay",
+    "type": "ContentType",
+    "createdAt": "2020-04-08T15:41:43.032Z",
+    "updatedAt": "2020-04-11T18:07:44.864Z",
+    "environment": {
+      "sys": {
+        "id": "master",
+        "type": "Link",
+        "linkType": "Environment"
+      }
+    },
+    "publishedVersion": 3,
+    "publishedAt": "2020-04-11T18:07:44.864Z",
+    "firstPublishedAt": "2020-04-08T15:41:43.442Z",
+    "createdBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "60rnm6vaTWG4UoUlqDLxcx"
+      }
+    },
+    "updatedBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "60rnm6vaTWG4UoUlqDLxcx"
+      }
+    },
+    "publishedCounter": 2,
+    "version": 4,
+    "publishedBy": {
+      "sys": {
+        "type": "Link",
+        "linkType": "User",
+        "id": "60rnm6vaTWG4UoUlqDLxcx"
+      }
+    }
+  }
+}

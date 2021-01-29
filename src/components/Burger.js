@@ -6,18 +6,17 @@ import { AppContext } from "../context/context.js";
 const StyledFaBars = styled(FaBars)`
   position: absolute;
   top: 20px;
-  left: 20px;
-  color: black;
-  font-size: 3rem;
+  right: 20px;
+  color: ${(props) => (props.isactive ? "black" : "white")};
+
+  font-size: 2rem;
   cursor: pointer;
   z-index: 2;
-  display: block;
-  left: ${(props) => (props.isactive ? "calc(22%)" : "20px")};
   transition: 0.4s linear;
 
-  /* @media (max-width: 480px) {
+  @media (max-width: 480px) {
     display: block;
-  } */
+  }
 `;
 
 const Burger = () => {

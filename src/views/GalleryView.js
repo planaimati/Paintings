@@ -1,14 +1,8 @@
 import React from "react";
-import styled from "styled-components";
-
-const StyledContainer = styled.div`
-  height: 100vh;
-  width: 100%;
-  background: blue;
-`;
+import GalleryTemplate from "../templates/GalleryTemplate";
 
 const GalleryView = () => {
-  return <StyledContainer>hello from gallery</StyledContainer>;
+  return <GalleryTemplate id="gallery">hello from gallery</GalleryTemplate>;
 };
 
 export default GalleryView;

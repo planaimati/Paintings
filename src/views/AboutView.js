@@ -1,7 +1,8 @@
 import React from "react";
+import AboutTemplate from "../templates/AboutTemplate";
 
 const AboutView = () => {
-  return <div>hello from about</div>;
+  return <AboutTemplate id="about">hello from about</AboutTemplate>;
 };
 
 export default AboutView;
