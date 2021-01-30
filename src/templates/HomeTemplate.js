@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { AppContext } from "../context/context.js";
-import Media from "../big components/Media";
+//import Media from "../big components/Media";
 
 const StyledWrapper = styled.div`
   height: 100vh;

@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import { images } from "../API/category";
 import { AppContext } from "../context/context";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 

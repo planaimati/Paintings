@@ -1,18 +1,8 @@
 import React from "react";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { AppContext } from "../context/context";
 import { useParams } from "react-router-dom";
-import styled from "styled-components";
 import Gallery from "../components/Gallery";
-
-const StyledWrapper = styled.div`
-  margin-top: 35vh;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
 
 const SingleProductTemplate = () => {
   const { galleryItems } = useContext(AppContext);
@@ -20,7 +10,7 @@ const SingleProductTemplate = () => {
   const { id } = useParams();
 
   const singleItem = galleryItems.find((item) => {
-    return item.id == id;
+    return item.id.toString() === id;
   });
 
   const images = [

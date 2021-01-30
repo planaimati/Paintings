@@ -104,7 +104,7 @@ const MenuTemplate = () => {
   let { pathname } = useLocation();
   console.log(pathname);
 
-  const colorBgc = pathname === "/about" ? "#212529" : "transparent";
+  //const colorBgc = pathname === "/about" ? "#212529" : "transparent";
   const colorFont = pathname === "/about" ? "#F8F9FA" : "#F8F9FA";
 
   const display = pathname === "/" ? "none" : "flex";

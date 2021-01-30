@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "../components/MainHeader";
-import LongText from "../components/Text/LongText";
 import Image from "../components/Text/Image";
 import Container from "../components/Text/Container";
 

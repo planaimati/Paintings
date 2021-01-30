@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { AppContext } from "../context/context";
 import CategoryItem from "../components/CategoryItem";
-import { Link } from "react-router-dom";
 
 const StyledWrapper = styled.div`
   min-height: 100vh;

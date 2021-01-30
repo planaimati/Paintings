@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import Theme from "../theme/Theme.js";
 import GlobalStyle from "../theme/GlobalStyle";
 
@@ -9,7 +9,7 @@ import ContactView from "./ContactView";
 import GalleryView from "./GalleryView";
 import AboutView from "./AboutView";
 import MenuTemplate from "../templates/MenuTemplate";
-import Burger from "../components/Burger";
+//import Burger from "../components/Burger";
 import SingleProductView from "./SingleProductView";
 //import { useLocation } from "react-router-dom";
 
