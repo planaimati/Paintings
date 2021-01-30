@@ -11,7 +11,7 @@ const StyledWrapper = styled.div`
 const StyledHeader = styled.h1`
   font-family: "Nunito", sans-serif;
   font-size: ${(props) => props.size}rem;
-  color: black;
+  color: #111111;
   font-weight: 300;
   letter-spacing: 0.3rem;
 `;

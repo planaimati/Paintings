@@ -6,7 +6,7 @@ const StyledText = styled.p`
   font-size: 1.8rem;
   font-weight: 300;
   font-family: "Nunito", sans-serif;
-  text-align: left;
+  text-align: center;
   line-height: 2.8rem;
   letter-spacing: 0.1rem;
   word-wrap: break-word;

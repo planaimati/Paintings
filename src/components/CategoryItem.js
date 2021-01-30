@@ -24,12 +24,12 @@ const StyledImageWrapper = styled.div`
   background-size: cover;
   transition: 0.2s;
   &:hover {
-    opacity: 0.8;
+    filter: brightness(0.8);
   }
 `;
 const StyledTextWrapper = styled.div`
   display: flex;
-  height: 20%;
+  height: 10%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -39,7 +39,9 @@ const StyledTextWrapper = styled.div`
 
 const StyledItemName = styled.h5`
   margin-top: 0.5rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  letter-spacing: 0.2rem;
+  font-weight: 300;
 `;
 const StyledItemPrice = styled.p``;
 

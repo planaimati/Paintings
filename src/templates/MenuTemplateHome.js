@@ -16,8 +16,11 @@ const StyledNav = styled.nav`
   align-items: center;
   justify-content: space-between;
   transform: translateY(-50%);
-  @media (max-width: 480px) {
-    width: 80%;
+  @media (max-width: 700px) {
+    width: 60%;
+  }
+  @media (max-width: 700px) {
+    width: 60%;
   }
 `;
 
@@ -75,6 +78,11 @@ const StyledNavLink = styled(NavLink)`
   font-weight: 300;
   letter-spacing: 0.3rem;
   font-family: "Nunito", sans-serif;
+  transition: 0.3s;
+
+  &:hover {
+    color: #e1e2e3;
+  }
 
   @media (max-width: 480px) {
     color: black;

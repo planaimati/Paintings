@@ -8,6 +8,9 @@ const TextContainer = styled.div`
   justify-content: center;
   margin-top: 5rem;
   width: 70%;
+  @media (max-width: 480px) {
+    width: 90%;
+  }
 `;
 
 const Container = (props) => {

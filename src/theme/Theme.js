@@ -5,6 +5,7 @@ const theme = {
   color: {
     mainDark: "#1D1D1D",
     mainLight: "#ECECEC",
+    fontDark: "#526163",
   },
 };
 

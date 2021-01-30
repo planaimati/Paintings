@@ -19,12 +19,14 @@ const StyledImageWrapper = styled.div`
   height: 100vh;
   width: 30%;
   overflow: hidden;
+  margin-bottom: 3rem;
 
   @media (max-width: 900px) {
     width: 50%;
   }
   @media (max-width: 480px) {
-    width: 80%;
+    width: 90%;
+    height: 90vh;
   }
 `;
 
@@ -53,6 +55,25 @@ const StyledArrowContainer = styled.div`
   cursor: pointer;
   display: flex;
   align-items: center;
+`;
+
+const StyledDescWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  justify-content: space-between;
+`;
+
+const StyledDesc = styled.h4`
+  text-transform: capitalize;
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+`;
+const Line = styled.div`
+  height: 0.03rem;
+  width: 50%;
+  background-color: grey;
+  margin-bottom: 3rem;
 `;
 
 const Gallery = (props) => {
@@ -84,6 +105,12 @@ const Gallery = (props) => {
           );
         })}
       </StyledImageWrapper>
+      <Line></Line>
+      <StyledDescWrapper>
+        <StyledDesc>Name:</StyledDesc>
+        <StyledDesc>Technique:</StyledDesc>
+        <StyledDesc>Dimensions:</StyledDesc>
+      </StyledDescWrapper>
     </StyledWrapper>
   );
 };

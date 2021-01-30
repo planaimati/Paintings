@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { AppContext } from "../context/context.js";
-//import Media from "../big components/Media";
+import Media from "../components/MediaIcon";
 
 const StyledWrapper = styled.div`
   height: 100vh;
@@ -29,6 +29,7 @@ const HomeTemplate = () => {
   return (
     <StyledWrapper isactive={activeMenu} id="home">
       <StyledWrapperTwo></StyledWrapperTwo>
+      <Media></Media>
     </StyledWrapper>
   );
 };

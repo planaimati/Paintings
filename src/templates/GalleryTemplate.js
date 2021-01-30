@@ -24,16 +24,32 @@ const StyledGalleryMenu = styled.div`
 const StyledGalleryMenuButon = styled.button`
   font-family: "Nunito", sans-serif;
   font-size: 2rem;
-  color: black;
-  font-weight: 300;
+  color: ${({ active }) => (active ? "black" : "#526163")};
+  font-weight: ${({ active }) => (active ? 700 : 300)};
   letter-spacing: 0.3rem;
   background: none;
   border: none;
+  transition: 0.3s;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    color: black;
+  }
 
   @media (max-width: 480px) {
     font-size: 1.5rem;
     margin: 0 0.5rem 0 0.5rem;
   }
+`;
+
+const StyledGalleryMenuButonOne = styled(StyledGalleryMenuButon)`
+  color: ${({ active }) => (active ? "black" : "#526163")};
+  font-weight: ${({ active }) => (active ? 700 : 300)};
+`;
+const StyledGalleryMenuButonTwo = styled(StyledGalleryMenuButon)`
+  color: ${({ active }) => (active ? "black" : "#526163")};
+  font-weight: ${({ active }) => (active ? 700 : 300)};
 `;
 
 const StyledGalleryItemsWrapper = styled.div`
@@ -59,28 +75,38 @@ const StyledLine = styled.div`
 `;
 
 const GalleryTemplate = () => {
-  const { toggleSetNewGalleryItems, newGalleryItems } = useContext(AppContext);
+  const {
+    toggleSetNewGalleryItems,
+    newGalleryItems,
+    objects,
+    others,
+    imagesCategory,
+  } = useContext(AppContext);
+
   return (
     <StyledWrapper>
       <StyledGalleryMenu>
         <StyledGalleryMenuButon
           onClick={(e) => toggleSetNewGalleryItems(e)}
           id="images"
+          active={imagesCategory}
         >
           Images
         </StyledGalleryMenuButon>
-        <StyledGalleryMenuButon
+        <StyledGalleryMenuButonOne
           onClick={(e) => toggleSetNewGalleryItems(e)}
           id="objects"
+          active={objects}
         >
           Objects
-        </StyledGalleryMenuButon>
-        <StyledGalleryMenuButon
+        </StyledGalleryMenuButonOne>
+        <StyledGalleryMenuButonTwo
           onClick={(e) => toggleSetNewGalleryItems(e)}
           id="others"
+          active={others}
         >
           Others
-        </StyledGalleryMenuButon>
+        </StyledGalleryMenuButonTwo>
       </StyledGalleryMenu>
       <StyledLine></StyledLine>
       <StyledGalleryItemsWrapper>

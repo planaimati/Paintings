@@ -1,26 +1,52 @@
 import React from "react";
 import styled from "styled-components";
-import { FaInstagram, FaFacebookSquare } from "react-icons/fa";
-import { FiMail } from "react-icons/fi";
+import { FaInstagram, FaFacebookF } from "react-icons/fa";
 
-const StyledMail = styled(FaFacebookSquare)`
-  color: ${(props) => props.theme.color.mainLight};
-`;
 const StyledInstagram = styled(FaInstagram)`
-  color: ${(props) => props.theme.color.mainLight};
+  color: black;
 `;
-const StyledFacebook = styled(FiMail)`
-  color: ${(props) => props.theme.color.mainLight};
+const StyledFacebook = styled(FaFacebookF)`
+  color: black;
+`;
+
+const StyledContainer = styled.div`
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 40%;
+  bottom: 10%;
+
+  right: 0;
+`;
+
+const StyleIconWrapper = styled.div`
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin: 1rem;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    filter: brightness(0.8);
+  }
 `;
 
 const MediaIcon = (props) => {
-  if (props.icon === "ig") {
-    return <StyledInstagram></StyledInstagram>;
-  } else if (props.icon === "mail") {
-    return <StyledMail></StyledMail>;
-  } else if (props.icon === "fb") {
-    return <StyledFacebook></StyledFacebook>;
-  }
+  return (
+    <StyledContainer>
+      <StyleIconWrapper>
+        <StyledInstagram></StyledInstagram>
+      </StyleIconWrapper>
+      <StyleIconWrapper>
+        <StyledFacebook></StyledFacebook>
+      </StyleIconWrapper>
+    </StyledContainer>
+  );
 };
 
 export default MediaIcon;

@@ -48,6 +48,7 @@ const StyledNavHeaderSmall = styled.h4`
   letter-spacing: 0.55rem;
   font-weight: 300;
   font-size: 1.6rem;
+  color: #526163;
 `;
 
 const StyledList = styled.ul`
@@ -59,22 +60,6 @@ const StyledList = styled.ul`
   list-style: none;
   grid-column: 2/-1;
   justify-content: space-around;
-
-  @media (max-width: 480px) {
-  }
-
-  /* @media (max-width: 480px) {
-    //display: ${(props) => (props.isactive ? "flex" : "none")};
-    position: absolute;
-    top: 0;
-    height: 100vh;
-    background-color: white;
-    right: ${(props) => (props.isactive ? "0" : "-100%")};
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    grid-column: 1/-1;
-  } */
 `;
 
 const StyledLink = styled.li`
@@ -87,10 +72,15 @@ const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   font-size: 1.3rem;
   text-transform: capitalize;
-  color: black;
+  color: ${(props) => props.theme.color.fontDark};
   font-weight: 300;
   letter-spacing: 0.3rem;
   font-family: "Nunito", sans-serif;
+
+  &.active {
+    color: black;
+    font-weight: 500;
+  }
 
   @media (max-width: 480px) {
     color: black;
@@ -122,9 +112,11 @@ const MenuTemplate = () => {
         <StyledList isactive={activeMenu}>
           <StyledLink>
             <StyledNavLink
+              exact
               to="/"
               color={colorFont}
               onClick={toggleSetActiveMenu}
+              activeClassName="active"
             >
               Home
             </StyledNavLink>
@@ -134,17 +126,26 @@ const MenuTemplate = () => {
               to="/about"
               color={colorFont}
               onClick={toggleSetActiveMenu}
+              activeClassName="active"
             >
               About
             </StyledNavLink>
           </StyledLink>
           <StyledLink>
-            <StyledNavLink to="/gallery" onClick={toggleSetActiveMenu}>
+            <StyledNavLink
+              to="/gallery"
+              onClick={toggleSetActiveMenu}
+              activeClassName="active"
+            >
               Gallery
             </StyledNavLink>
           </StyledLink>
           <StyledLink>
-            <StyledNavLink to="/contact" onClick={toggleSetActiveMenu}>
+            <StyledNavLink
+              to="/contact"
+              onClick={toggleSetActiveMenu}
+              activeClassName="active"
+            >
               Contact
             </StyledNavLink>
           </StyledLink>
