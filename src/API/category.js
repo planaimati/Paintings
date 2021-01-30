@@ -13,11 +13,11 @@ export const images = [
     id: 2,
     category: "images",
     img1:
-      "https://images.pexels.com/photos/789378/pexels-photo-789378.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+      "https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
     img2:
-      "https://images.pexels.com/photos/3062964/pexels-photo-3062964.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+      "https://images.pexels.com/photos/1998479/pexels-photo-1998479.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
     img3:
-      "https://images.pexels.com/photos/711022/pexels-photo-711022.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+      "https://images.pexels.com/photos/1585325/pexels-photo-1585325.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
   },
   {
     id: 3,

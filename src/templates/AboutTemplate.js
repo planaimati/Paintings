@@ -18,7 +18,7 @@ const StyledWrapper = styled.div`
 const AboutTemplate = (props) => {
   return (
     <StyledWrapper>
-      <Image img="https://images.pexels.com/photos/3518623/pexels-photo-3518623.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"></Image>
+      <Image img="https://images.pexels.com/photos/735199/pexels-photo-735199.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"></Image>
       <Container>
         <Header size="2.5">About Me</Header>
         <LongText>
