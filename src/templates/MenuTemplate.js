@@ -105,7 +105,7 @@ const MenuTemplate = () => {
     return (
       <StyledNav isactive={activeMenu} display={display}>
         <StyledHeaderContainer>
-          <StyledNavHeader to="/">Anna Sormus</StyledNavHeader>
+          <StyledNavHeader to="/">Imię Nazwisko</StyledNavHeader>
 
           <StyledNavHeaderSmall>malarstwo</StyledNavHeaderSmall>
         </StyledHeaderContainer>

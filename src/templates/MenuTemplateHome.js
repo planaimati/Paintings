@@ -94,7 +94,7 @@ const MenuTemplateHome = () => {
   return (
     <StyledNav>
       <StyledHeaderContainer>
-        <StyledNavHeader to="/">Anna Sormus</StyledNavHeader>
+        <StyledNavHeader to="/">Imie Nazwisko</StyledNavHeader>
         <StyledNavHeaderSmall>malarstwo</StyledNavHeaderSmall>
       </StyledHeaderContainer>
       <StyledList>
