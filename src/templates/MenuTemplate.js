@@ -3,38 +3,52 @@ import styled from "styled-components";
 import { NavLink, Link } from "react-router-dom";
 import { AppContext } from "../context/context";
 import { useLocation } from "react-router-dom";
-import StyledLine from "../components/Line";
 import MenuTemplateHome from "./MenuTemplateHome";
+import podpis from "../assets/img/podpisA.png";
 
 const StyledNav = styled.nav`
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
-  height: 35vh;
+  height: 15vh;
   width: 100%;
   background: white;
   z-index: 1;
   transition: 0.3s;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
   @media (max-width: 480px) {
-    //grid-template-columns: 1fr;
+    flex-direction: column;
   }
 `;
 
 const StyledHeaderContainer = styled.div`
-  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 25%;
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+`;
+
+const StyledTextContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 0 1.5rem 0 1.5rem;
+  width: 100%;
+  height: 100%;
 `;
 
 const StyledNavHeader = styled(Link)`
-  font-size: 4.9rem;
+  font-size: 1.7rem;
   color: black;
   font-family: "Nunito", sans-serif;
   letter-spacing: 0.1rem;
@@ -47,8 +61,17 @@ const StyledNavHeaderSmall = styled.h4`
   font-family: "Nunito", sans-serif;
   letter-spacing: 0.55rem;
   font-weight: 300;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   color: #526163;
+`;
+
+const StyledListContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const StyledList = styled.ul`
@@ -60,6 +83,10 @@ const StyledList = styled.ul`
   list-style: none;
   grid-column: 2/-1;
   justify-content: space-around;
+
+  @media (max-width: 480px) {
+    width: 98%;
+  }
 `;
 
 const StyledLink = styled.li`
@@ -84,8 +111,14 @@ const StyledNavLink = styled(NavLink)`
 
   @media (max-width: 480px) {
     color: black;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
+`;
+
+const StyledVerticalLine = styled.div`
+  height: 90%;
+  width: 0.5px;
+  background-color: black;
 `;
 
 const MenuTemplate = () => {
@@ -105,52 +138,66 @@ const MenuTemplate = () => {
     return (
       <StyledNav isactive={activeMenu} display={display}>
         <StyledHeaderContainer>
-          <StyledNavHeader to="/">Imię Nazwisko</StyledNavHeader>
+          <StyledTextContainer podpis={podpis}>
+            <StyledNavHeader to="/">Anna Maria Szpecht</StyledNavHeader>
 
-          <StyledNavHeaderSmall>malarstwo</StyledNavHeaderSmall>
+            <StyledNavHeaderSmall>Contemporary art</StyledNavHeaderSmall>
+          </StyledTextContainer>
+          <StyledVerticalLine></StyledVerticalLine>
         </StyledHeaderContainer>
-        <StyledList isactive={activeMenu}>
-          <StyledLink>
-            <StyledNavLink
-              exact
-              to="/"
-              color={colorFont}
-              onClick={toggleSetActiveMenu}
-              activeClassName="active"
-            >
-              Home
-            </StyledNavLink>
-          </StyledLink>
-          <StyledLink>
-            <StyledNavLink
-              to="/about"
-              color={colorFont}
-              onClick={toggleSetActiveMenu}
-              activeClassName="active"
-            >
-              About
-            </StyledNavLink>
-          </StyledLink>
-          <StyledLink>
-            <StyledNavLink
-              to="/gallery"
-              onClick={toggleSetActiveMenu}
-              activeClassName="active"
-            >
-              Gallery
-            </StyledNavLink>
-          </StyledLink>
-          <StyledLink>
-            <StyledNavLink
-              to="/contact"
-              onClick={toggleSetActiveMenu}
-              activeClassName="active"
-            >
-              Contact
-            </StyledNavLink>
-          </StyledLink>
-        </StyledList>
-        <StyledLine></StyledLine>
+
+        <StyledListContainer>
+          <StyledList isactive={activeMenu}>
+            <StyledLink>
+              <StyledNavLink
+                exact
+                to="/"
+                color={colorFont}
+                onClick={toggleSetActiveMenu}
+                activeClassName="active"
+              >
+                Home
+              </StyledNavLink>
+            </StyledLink>
+            <StyledLink>
+              <StyledNavLink
+                to="/about"
+                color={colorFont}
+                onClick={toggleSetActiveMenu}
+                activeClassName="active"
+              >
+                About
+              </StyledNavLink>
+            </StyledLink>
+            <StyledLink>
+              <StyledNavLink
+                to="/gallery2D"
+                onClick={toggleSetActiveMenu}
+                activeClassName="active"
+              >
+                Artwork2D
+              </StyledNavLink>
+            </StyledLink>
+            <StyledLink>
+              <StyledNavLink
+                to="/gallery3D"
+                onClick={toggleSetActiveMenu}
+                activeClassName="active"
+              >
+                Artwork3D
+              </StyledNavLink>
+            </StyledLink>
+            <StyledLink>
+              <StyledNavLink
+                to="/contact"
+                onClick={toggleSetActiveMenu}
+                activeClassName="active"
+              >
+                Contact
+              </StyledNavLink>
+            </StyledLink>
+          </StyledList>
+        </StyledListContainer>
       </StyledNav>
     );
 };

@@ -16,11 +16,16 @@ const StyledNav = styled.nav`
   align-items: center;
   justify-content: space-between;
   transform: translateY(-50%);
-  @media (max-width: 700px) {
-    width: 60%;
+
+  @media (max-width: 1024px) {
+    width: 70%;
   }
+
   @media (max-width: 700px) {
-    width: 60%;
+    width: 90%;
+  }
+  @media (max-width: 480px) {
+    width: 100%;
   }
 `;
 
@@ -39,6 +44,7 @@ const StyledNavHeader = styled.h1`
   text-decoration: none;
   font-weight: 200;
   color: white;
+  text-transform: uppercase;
   @media (max-width: 480px) {
     font-size: 2.5rem;
   }
@@ -86,7 +92,7 @@ const StyledNavLink = styled(NavLink)`
 
   @media (max-width: 480px) {
     color: black;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 `;
 
@@ -94,15 +100,18 @@ const MenuTemplateHome = () => {
   return (
     <StyledNav>
       <StyledHeaderContainer>
-        <StyledNavHeader to="/">Imie Nazwisko</StyledNavHeader>
-        <StyledNavHeaderSmall>malarstwo</StyledNavHeaderSmall>
+        <StyledNavHeader to="/">anna maria szpecht</StyledNavHeader>
+        <StyledNavHeaderSmall>contemporary art</StyledNavHeaderSmall>
       </StyledHeaderContainer>
       <StyledList>
         <StyledLink>
           <StyledNavLink to="/about">About</StyledNavLink>
         </StyledLink>
         <StyledLink>
-          <StyledNavLink to="/gallery">Gallery</StyledNavLink>
+          <StyledNavLink to="/gallery2D">Artwork 2D</StyledNavLink>
+        </StyledLink>
+        <StyledLink>
+          <StyledNavLink to="/gallery3D">Artwork 3D</StyledNavLink>
         </StyledLink>
         <StyledLink>
           <StyledNavLink to="/contact">Contact</StyledNavLink>

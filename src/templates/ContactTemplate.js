@@ -11,16 +11,25 @@ const StyledWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: 35vh;
+`;
+const StyledContentWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 17vh;
 `;
 
 const ContactTemplate = () => {
   return (
     <StyledWrapper>
-      <Image img="https://images.pexels.com/photos/735199/pexels-photo-735199.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" />
-      <Container>
-        <Header>Contact</Header>
-      </Container>
+      <StyledContentWrapper>
+        <Image img="https://images.pexels.com/photos/735199/pexels-photo-735199.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" />
+        <Container>
+          <Header>Contact</Header>
+        </Container>
+      </StyledContentWrapper>
     </StyledWrapper>
   );
 };

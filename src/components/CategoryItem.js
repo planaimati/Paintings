@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const StyledWrapper = styled.div`
-  height: 46rem;
-  width: 28rem;
+  height: 6rem;
+  width: 4rem;
 
   background-repeat: no-repeat;
   background-size: cover;
