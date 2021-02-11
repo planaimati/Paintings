@@ -1,128 +1,61 @@
+import Obraz1 from "../assets/img/03NIepewność kamienia(1).jpg";
+import Obraz2 from "../assets/img/09.jpg";
+import Obraz4 from "../assets/img/Adam i Ewa.jpg";
+import Obraz5 from "../assets/img/obraz2.jpg";
+
 export const images = [
   {
     id: 1,
     category: "painting on canvas",
-    categoryImg:
-      "https://images.pexels.com/photos/3632679/pexels-photo-3632679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    series: {
-      name: "terra incognita",
+    categoryImg: Obraz5,
+    series: [
+      {
+        id: 1,
+        name: "terra incognita",
+        images: [
+          {
+            id: 1,
+            title: "daleka podróż",
+            seriesName: "terra incognita",
 
-      pictures: [
-        {
-          id: 1,
-          title: "h3h3",
-          img1:
-            "https://images.pexels.com/photos/518409/pexels-photo-518409.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-          img2:
-            "https://images.pexels.com/photos/518409/pexels-photo-518409.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-          img3:
-            "https://images.pexels.com/photos/518409/pexels-photo-518409.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        },
+            images: [Obraz1, Obraz2, Obraz4],
+          },
+        ],
+      },
 
-        {
-          id: 2,
-          title: "love story",
-          img1:
-            "https://images.pexels.com/photos/2823459/pexels-photo-2823459.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-          img2:
-            "https://images.pexels.com/photos/2823459/pexels-photo-2823459.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-          img3:
-            "https://images.pexels.com/photos/2823459/pexels-photo-2823459.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        },
-      ],
-    },
+      {
+        id: 2,
+        name: "mini",
+        images: [
+          {
+            id: 1,
+            title: "daleka podróż",
+            seriesName: "mini",
+
+            images: [
+              "https://images.pexels.com/photos/3107177/pexels-photo-3107177.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+              "https://images.pexels.com/photos/3016038/pexels-photo-3016038.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+              "https://images.pexels.com/photos/1572386/pexels-photo-1572386.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
+    //kategoria glass painting
     id: 2,
     category: "glass painting",
     categoryImg:
       "https://images.pexels.com/photos/674837/pexels-photo-674837.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-    series: {
-      name: "rytm",
-
-      pictures: [
-        {
-          id: 1,
-          title: "h3h3",
-          img1:
-            "https://images.pexels.com/photos/674837/pexels-photo-674837.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-          img2:
-            "https://images.pexels.com/photos/2823459/pexels-photo-2823459.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-          img3:
-            "https://images.pexels.com/photos/2823459/pexels-photo-2823459.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        },
-
-        {
-          id: 2,
-          title: "love story",
-          img1:
-            "https://images.pexels.com/photos/2823459/pexels-photo-2823459.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-          img2:
-            "https://images.pexels.com/photos/2823459/pexels-photo-2823459.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-          img3:
-            "https://images.pexels.com/photos/2823459/pexels-photo-2823459.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        },
-      ],
-    },
+    series: [],
   },
   {
+    //kategoria graphic
     id: 3,
     category: "graphic",
-    img1:
-      "https://images.pexels.com/photos/1690351/pexels-photo-1690351.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-  },
-  {
-    id: 4,
-    category: "objects",
-    img1:
-      "https://images.pexels.com/photos/1690351/pexels-photo-1690351.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-  },
-  {
-    id: 5,
-    category: "others",
-    img1:
-      "https://images.pexels.com/photos/1690351/pexels-photo-1690351.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-  },
-  {
-    id: 6,
-    category: "others",
-    img1:
-      "https://images.pexels.com/photos/1690351/pexels-photo-1690351.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-  },
-  {
-    id: 7,
-    category: "others",
-    img1:
-      "https://images.pexels.com/photos/1690351/pexels-photo-1690351.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-  },
-  {
-    id: 8,
-    category: "objects",
-    img1:
-      "https://images.pexels.com/photos/1690351/pexels-photo-1690351.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-  },
-  {
-    id: 9,
-    category: "objects",
-    img1:
-      "https://images.pexels.com/photos/1690351/pexels-photo-1690351.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-  },
-  {
-    id: 10,
-    category: "others",
-    img1:
-      "https://images.pexels.com/photos/1690351/pexels-photo-1690351.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-  },
-  {
-    id: 11,
-    category: "images",
-    img1:
-      "https://images.pexels.com/photos/1690351/pexels-photo-1690351.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-  },
-  {
-    id: 12,
-    category: "others",
-    img1:
-      "https://images.pexels.com/photos/1690351/pexels-photo-1690351.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    categoryImg:
+      "https://images.pexels.com/photos/2911545/pexels-photo-2911545.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    series: [],
   },
 ];

@@ -3,18 +3,36 @@ import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import { AppContext } from "../context/context";
 import PictureItem from "../components/PictureItem";
+import MainHeader from "../components/MainHeader";
 
 const StyledContainer = styled.div`
-  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+`;
+
+const StyledWrapper = styled.div`
+  margin-top: 15vh;
+  height: 85%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 5vh;
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 
 const StyledImagesContainer = styled.div`
-  height: 80%;
-  width: 80%;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -22,25 +40,31 @@ const StyledImagesContainer = styled.div`
   flex-wrap: wrap;
 `;
 
-const PicturesTemplate = (props) => {
+const PicturesTemplate = () => {
   const { galleryItems } = useContext(AppContext);
 
   const { id } = useParams();
+  console.log(id);
 
   const items = galleryItems.find((item) => item.category === id);
 
+  const category = items.series.map((item) => (
+    <StyledImagesContainer key={item.id}>
+      <MainHeader>{item.name}</MainHeader>
+      {item.images.map((item) => (
+        <PictureItem
+          src={item.images[0]}
+          key={item.id}
+          id={item.id}
+          series={item.seriesName}
+        ></PictureItem>
+      ))}
+    </StyledImagesContainer>
+  ));
+
   return (
     <StyledContainer>
-      <StyledImagesContainer>
-        {items.series.pictures.map((item) => (
-          <PictureItem
-            src={item.img1}
-            alt="xd"
-            key={item.id}
-            id={item.id}
-          ></PictureItem>
-        ))}
-      </StyledImagesContainer>
+      <StyledWrapper>{category}</StyledWrapper>
     </StyledContainer>
   );
 };

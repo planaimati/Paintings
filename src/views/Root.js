@@ -32,7 +32,17 @@ const Root = () => {
           <Route exact path="/gallery2D" component={Gallery2DView}></Route>
           <Route exact path="/gallery3D" component={Gallery3DView}></Route>
           <Route exact path="/gallery3D/:id" component={PicturesView}></Route>
-          <Route exact path="/gallery3D/:id/:id" component={SinglePictureItem}/>
+          <Route
+            exact
+            path="/gallery3D/:id/:id"
+            component={SinglePictureItem}
+          />
+          <Route exact path="/gallery2D/:id" component={PicturesView} />
+          <Route
+            exact
+            path="/gallery2D/:id/:id"
+            component={SinglePictureItem}
+          />
 
           <Route exact path="/about" component={AboutView}></Route>
           <Route exact path="/contact" component={ContactView}></Route>

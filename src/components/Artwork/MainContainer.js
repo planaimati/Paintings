@@ -13,10 +13,13 @@ const StyledWrapper = styled.div`
 const StyledImagesWrapper = styled.div`
   margin-top: 15vh;
   width: 80%;
-  height: 75%;
+  height: 85%;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 
 const MainContainer = (props) => {

@@ -44,7 +44,7 @@ const StyledNavHeader = styled.h1`
   text-decoration: none;
   font-weight: 200;
   color: white;
-  text-transform: uppercase;
+  text-transform: capitalize;
   @media (max-width: 480px) {
     font-size: 2.5rem;
   }

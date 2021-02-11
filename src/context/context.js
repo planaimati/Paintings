@@ -11,11 +11,18 @@ export const AppContextProvider = ({ children }) => {
   const [objects, setObjects] = useState(false);
   const [others, setOthers] = useState(false);
   const [index, setIndex] = useState(0);
+  const [imageIndex, setImageIndex] = useState(0);
   // domyslna kategoria
   useEffect(() => {
     setGalleryItems(images);
     setNewGalleryItems(images.filter((item) => item.category === "images"));
   }, []);
+
+  //zmiana indeksu dla obrazków w SmallGallery
+
+  const toggleSetImageIndex = (x) => {
+    setImageIndex((prevState) => (prevState = x));
+  };
 
   //galeria obrazów dla pojedyńczego itemu
 
@@ -83,6 +90,8 @@ export const AppContextProvider = ({ children }) => {
         imagesCategory,
         others,
         objects,
+        toggleSetImageIndex,
+        imageIndex,
       }}
     >
       {children}

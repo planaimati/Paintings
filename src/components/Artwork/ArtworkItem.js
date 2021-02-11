@@ -4,8 +4,9 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
+
 const StyledWrapper = styled.div`
-  height: 100%;
+  height: 45rem;
   width: 30rem;
   display: flex;
   flex-direction: column;
@@ -23,7 +24,7 @@ const StyledTextContainer = styled.div`
 
 const StyledImage = styled.div`
   width: 100%;
-  height: 80%;
+  height: 100%;
   background-image: url(${(props) => props.img});
   background-size: cover;
   background-position: center;
@@ -49,7 +50,6 @@ const StyledArrow = styled(FiChevronRight)`
 const ArtworkItem = (props) => {
   const location = useLocation();
 
-  console.log(location.pathname);
   return (
     <StyledWrapper>
       <StyledImage img={props.categoryImg}></StyledImage>

@@ -13,6 +13,7 @@ const StyledWrapper = styled.div`
 `;
 
 const ContentWrapper = styled.div`
+  margin-top: 15vh;
   height: 80%;
   width: 80%;
   display: flex;
@@ -21,13 +22,19 @@ const ContentWrapper = styled.div`
 `;
 
 const StyledImageWrapper = styled.div`
-  height: 50rem;
+  height: 100%;
   width: 30rem;
 `;
 
 const StyledImage = styled.img`
   height: 100%;
   width: 100%;
+  border-radius: 5px;
+`;
+
+const StyledImageSmall = styled.img`
+  height: 15rem;
+  width: 10rem;
 `;
 
 const SinglePictureItem = (props) => {
@@ -35,25 +42,49 @@ const SinglePictureItem = (props) => {
   const { id } = useParams();
   // nazwa poprzdniego routa który odpowiada nawie kategorii jaka nas interesuje
   const prevPath = props.location.state.id;
-  const { galleryItems } = useContext(AppContext);
+  const series = props.location.state.series;
+  const { galleryItems, imageIndex, toggleSetImageIndex } = useContext(
+    AppContext
+  );
 
   // wybrana kategoria produktów
-  const singlePictureItem = galleryItems.find(
-    (item) => item.category === prevPath
-  );
-  // pojedynczy obraz
-  const singlePicture = singlePictureItem.series.pictures.find(
-    (item) => item.id.toString() === id
-  );
+  const category = galleryItems.find((item) => item.category === prevPath);
+  const pictures = category.series.find((item) => item.name === series);
+  console.log(pictures);
+  const picture = pictures.images.find((item) => item.id.toString() === id);
 
-  console.log(singlePicture);
+  console.log(pictures);
+  console.log(id);
+
+  // pojedynczy obraz
+  //const singlePicture = singlePictureItem.series.pictures.find(
+  //(item) => item.id.toString() === id
+  //);
+
+  //console.log(singlePicture);
+
+  console.log(picture);
 
   return (
     <StyledWrapper>
       <ContentWrapper>
         <StyledImageWrapper>
-          <StyledImage src={singlePicture.img3} alt="" />
+          <StyledImage src={picture.images[imageIndex]} alt="" />
         </StyledImageWrapper>
+        <p>{picture.title}</p>
+
+        <StyledImageSmall
+          src={picture.images[0]}
+          onClick={() => toggleSetImageIndex(0)}
+        ></StyledImageSmall>
+        <StyledImageSmall
+          src={picture.images[1]}
+          onClick={() => toggleSetImageIndex(1)}
+        ></StyledImageSmall>
+        <StyledImageSmall
+          src={picture.images[2]}
+          onClick={() => toggleSetImageIndex(2)}
+        ></StyledImageSmall>
       </ContentWrapper>
     </StyledWrapper>
   );
