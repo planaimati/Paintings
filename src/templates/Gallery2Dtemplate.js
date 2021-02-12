@@ -6,7 +6,7 @@ import ArtworkItem from "../components/Artwork/ArtworkItem";
 const Gallery2Dtemplate = () => {
   const { galleryItems } = useContext(AppContext);
 
-  console.log(galleryItems);
+
 
   return (
     <MainContainer>

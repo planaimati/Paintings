@@ -2,7 +2,7 @@ import React from "react";
 import Theme from "../theme/Theme.js";
 import GlobalStyle from "../theme/GlobalStyle";
 
-import { BrowserRouter, Switch, Route, useRouteMatch } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import HomeView from "./HomeView";
 import ContactView from "./ContactView";

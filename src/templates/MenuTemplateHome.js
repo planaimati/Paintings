@@ -71,7 +71,6 @@ const StyledList = styled.ul`
 `;
 
 const StyledLink = styled.li`
-  width: 10rem;
   text-align: center;
 `;
 
@@ -91,8 +90,7 @@ const StyledNavLink = styled(NavLink)`
   }
 
   @media (max-width: 480px) {
-    color: black;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 `;
 

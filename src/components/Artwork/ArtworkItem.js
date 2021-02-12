@@ -4,10 +4,9 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
-
 const StyledWrapper = styled.div`
   height: 45rem;
-  width: 30rem;
+  width: 25rem;
   display: flex;
   flex-direction: column;
   margin: 2rem;
@@ -16,6 +15,7 @@ const StyledWrapper = styled.div`
 `;
 
 const StyledTextContainer = styled.div`
+  margin-top: 1rem;
   height: 10%;
   display: flex;
   justify-content: space-around;
@@ -29,6 +29,7 @@ const StyledImage = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 3px;
 `;
 
 const StyledLink = styled(Link)`
@@ -36,10 +37,14 @@ const StyledLink = styled(Link)`
   text-transform: uppercase;
   font-size: 1.8rem;
   color: #111111;
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: 0.3rem;
   text-align: center;
   text-decoration: none;
+
+  &:hover ${StyledImage} {
+    filter: brightness(1.2);
+  }
 `;
 
 const StyledArrow = styled(FiChevronRight)`

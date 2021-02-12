@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledImageContainer = styled.div`
-  height: 48vh;
+  height: 25rem;
   width: 80%;
   background-image: url(${(props) => props.img});
   background-position: center;
@@ -11,7 +11,7 @@ const StyledImageContainer = styled.div`
 
   @media (max-width: 480px) {
     width: 90%;
-    height: 25vh;
+    height: 25rem;
   }
 `;
 

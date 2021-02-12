@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { AppContext } from "../context/context.js";
 import Media from "../components/MediaIcon";
+import BGC from "../assets/img/20190219_sciana1.jpg";
+import BGC1 from "../assets/img/20190219_sciana2.jpg";
 
 const StyledWrapper = styled.div`
   height: 100vh;
@@ -16,8 +18,13 @@ const StyledWrapperTwo = styled.div`
   height: 100%;
   width: 100%;
   position: relative;
-  background-color: ${(props) => props.theme.color.mainDark};
-  background-image: url("https://images.pexels.com/photos/696644/pexels-photo-696644.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  //background-color: ${(props) => props.theme.color.mainDark};
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url(${(props) => props.bgc});
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,7 +35,7 @@ const HomeTemplate = () => {
   const { activeMenu } = useContext(AppContext);
   return (
     <StyledWrapper isactive={activeMenu} id="home">
-      <StyledWrapperTwo></StyledWrapperTwo>
+      <StyledWrapperTwo bgc={BGC1}></StyledWrapperTwo>
       <Media></Media>
     </StyledWrapper>
   );

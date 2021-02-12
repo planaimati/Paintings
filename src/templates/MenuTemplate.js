@@ -20,7 +20,7 @@ const StyledNav = styled.nav`
   align-items: center;
   justify-content: space-between;
 
-  @media (max-width: 480px) {
+  @media (max-width: 730px) {
     flex-direction: column;
   }
 `;
@@ -28,23 +28,26 @@ const StyledNav = styled.nav`
 const StyledHeaderContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: cener;
   height: 100%;
   width: 25%;
 
-  @media (max-width: 480px) {
+  @media (max-width: 730px) {
     width: 100%;
   }
 `;
 
 const StyledTextContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   padding: 0 1.5rem 0 1.5rem;
   width: 100%;
   height: 100%;
+  @media (max-width: 730px) {
+    align-items: center;
+  }
 `;
 
 const StyledNavHeader = styled(Link)`
@@ -90,7 +93,6 @@ const StyledList = styled.ul`
 `;
 
 const StyledLink = styled.li`
-  width: 10rem;
   text-align: center;
 `;
 
@@ -119,6 +121,10 @@ const StyledVerticalLine = styled.div`
   height: 90%;
   width: 0.5px;
   background-color: black;
+  @media (max-width: 480px) {
+    height: 0.5px;
+    width: 50%;
+  }
 `;
 
 const MenuTemplate = () => {
@@ -143,7 +149,6 @@ const MenuTemplate = () => {
 
             <StyledNavHeaderSmall>Contemporary art</StyledNavHeaderSmall>
           </StyledTextContainer>
-          <StyledVerticalLine></StyledVerticalLine>
         </StyledHeaderContainer>
 
         <StyledListContainer>

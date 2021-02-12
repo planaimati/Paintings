@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledWrapper = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -17,8 +17,10 @@ const StyledImagesWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   @media (max-width: 480px) {
     flex-direction: column;
+    height: 100%;
   }
 `;
 

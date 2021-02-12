@@ -26,6 +26,7 @@ const StyledWrapper = styled.div`
   flex-wrap: wrap;
   margin-bottom: 5vh;
   @media (max-width: 480px) {
+    height: auto;
     flex-direction: column;
   }
 `;
