@@ -22,6 +22,12 @@ const StyledContainer = styled.div`
   align-items: flex-start;
   justify-content: space-around;
   flex-wrap: wrap;
+
+  @media (max-width: 730px) {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
   @media (max-width: 480px) {
     height: auto;
     flex-direction: column;
@@ -30,7 +36,7 @@ const StyledContainer = styled.div`
 `;
 
 const PicturesWrapper = styled.div`
-  margin-top: 5rem;
+  margin-top: 2rem;
   height: 80%;
   width: 40%;
   display: flex;
@@ -51,7 +57,7 @@ const StyledLine = styled.div`
 `;
 
 const DescWrapper = styled.div`
-  margin-top: 5rem;
+  margin-top: 2rem;
   height: 80%;
   width: 40%;
   display: flex;
@@ -129,7 +135,6 @@ const SinglePictureItem = (props) => {
   // wybrana kategoria produktów
   const category = galleryItems.find((item) => item.category === prevPath);
   const pictures = category.series.find((item) => item.name === series);
-  console.log(pictures);
   const picture = pictures.images.find((item) => item.id.toString() === id);
 
   return (

@@ -21,8 +21,6 @@ const PictureItem = (props) => {
 
   const { series } = props;
 
-  console.log(id);
-
   return (
     <StyledImageWrapper>
       <StyledLink

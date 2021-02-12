@@ -45,7 +45,6 @@ const PicturesTemplate = () => {
   const { galleryItems } = useContext(AppContext);
 
   const { id } = useParams();
-  console.log(id);
 
   const items = galleryItems.find((item) => item.category === id);
 

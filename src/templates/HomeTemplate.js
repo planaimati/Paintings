@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { AppContext } from "../context/context.js";
 import Media from "../components/MediaIcon";
-import BGC from "../assets/img/20190219_sciana1.jpg";
 import BGC1 from "../assets/img/20190219_sciana2.jpg";
 
 const StyledWrapper = styled.div`

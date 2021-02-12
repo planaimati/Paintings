@@ -30,7 +30,7 @@ const StyledHeaderContainer = styled.div`
   align-items: center;
   justify-content: cener;
   height: 100%;
-  width: 25%;
+  width: 40%;
 
   @media (max-width: 730px) {
     width: 100%;
@@ -117,21 +117,10 @@ const StyledNavLink = styled(NavLink)`
   }
 `;
 
-const StyledVerticalLine = styled.div`
-  height: 90%;
-  width: 0.5px;
-  background-color: black;
-  @media (max-width: 480px) {
-    height: 0.5px;
-    width: 50%;
-  }
-`;
-
 const MenuTemplate = () => {
   const { activeMenu, toggleSetActiveMenu } = useContext(AppContext);
 
   let { pathname } = useLocation();
-  console.log(pathname);
 
   //const colorBgc = pathname === "/about" ? "#212529" : "transparent";
   const colorFont = pathname === "/about" ? "#F8F9FA" : "#F8F9FA";
