@@ -19,7 +19,7 @@ const StyledNav = styled.nav`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-
+  border-bottom: ${(props) => (props.border > 0 ? "1px solid black" : "none")};
   @media (max-width: 730px) {
     flex-direction: column;
   }
@@ -118,7 +118,7 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 const MenuTemplate = () => {
-  const { activeMenu, toggleSetActiveMenu } = useContext(AppContext);
+  const { activeMenu, toggleSetActiveMenu, scrollTop } = useContext(AppContext);
 
   let { pathname } = useLocation();
 
@@ -131,7 +131,7 @@ const MenuTemplate = () => {
     return <MenuTemplateHome></MenuTemplateHome>;
   } else
     return (
-      <StyledNav isactive={activeMenu} display={display}>
+      <StyledNav isactive={activeMenu} display={display} border={scrollTop}>
         <StyledHeaderContainer>
           <StyledTextContainer podpis={podpis}>
             <StyledNavHeader to="/">Anna Maria Szpecht</StyledNavHeader>

@@ -6,19 +6,23 @@ export const AppContextProvider = ({ children }) => {
   //state
   const [activeMenu, setActiveMenu] = useState(0);
   const [galleryItems, setGalleryItems] = useState(images);
-  const [newGalleryItems, setNewGalleryItems] = useState([]);
-  const [imagesCategory, setImages] = useState(true);
-  const [objects, setObjects] = useState(false);
-  const [others, setOthers] = useState(false);
   const [index, setIndex] = useState(0);
   const [imageIndex, setImageIndex] = useState(0);
+  const [scrollTop, setScrollTop] = useState(0);
+
   // domyslna kategoria
   useEffect(() => {
+    window.addEventListener("scroll", toggleScroll);
     setGalleryItems(images);
-    setNewGalleryItems(images.filter((item) => item.category === "images"));
   }, []);
 
   //zmiana indeksu dla obrazków w SmallGallery
+
+  const toggleScroll = () => {
+    setScrollTop((prevState) => (prevState = window.pageYOffset));
+  };
+
+  //
 
   const toggleSetImageIndex = (x) => {
     setImageIndex((prevState) => (prevState = x));
@@ -51,47 +55,20 @@ export const AppContextProvider = ({ children }) => {
 
   // ustawianie kategorii
 
-  const toggleSetNewGalleryItems = (e) => {
-    const newArray = galleryItems.filter((item) => {
-      return item.category === e.target.id;
-    });
-
-    if (e.target.id === "images") {
-      setNewGalleryItems((prevState) => (prevState = newArray));
-      setImages(true);
-      setObjects(false);
-      setOthers(false);
-    } else if (e.target.id === "objects") {
-      setObjects(true);
-      setImages(false);
-      setOthers(false);
-      setNewGalleryItems((prevState) => (prevState = newArray));
-    } else if (e.target.id === "others") {
-      setOthers(true);
-      setImages(false);
-      setObjects(false);
-      setNewGalleryItems((prevState) => (prevState = newArray));
-    }
-
-    console.log(newGalleryItems);
-  };
-
   return (
     <AppContext.Provider
       value={{
         activeMenu,
         toggleSetActiveMenu,
-        toggleSetNewGalleryItems,
-        newGalleryItems,
+
         galleryItems,
         index,
         toggleSetIndexIncrease,
         toggleSetIndexDecrease,
-        imagesCategory,
-        others,
-        objects,
+
         toggleSetImageIndex,
         imageIndex,
+        scrollTop,
       }}
     >
       {children}

@@ -55,6 +55,7 @@ const StyledNavHeaderSmall = styled.h4`
   font-family: "Nunito", sans-serif;
   letter-spacing: 0.55rem;
   font-size: 1.8rem;
+  font-weight: 300;
   color: white;
 `;
 
