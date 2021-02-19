@@ -5,21 +5,19 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 const StyledWrapper = styled.div`
-  height: 45rem;
-  width: 25rem;
+  height: 75rem;
+  width: 40rem;
   display: flex;
   flex-direction: column;
-  margin: 2rem;
   align-items: center;
   justify-content: space-around;
-`;
+  margin: 1rem 3rem 0rem 3rem;
 
-const StyledTextContainer = styled.div`
-  margin-top: 1rem;
-  height: 10%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  @media (max-width: 480px) {
+    height: 80vh;
+    width: 100%;
+    margin: 1rem 0 0 0;
+  }
 `;
 
 const StyledImage = styled.div`
@@ -30,6 +28,15 @@ const StyledImage = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 3px;
+  opacity: 1;
+`;
+
+const StyledTextContainer = styled.div`
+  margin-top: 1rem;
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 `;
 
 const StyledLink = styled(Link)`
@@ -41,10 +48,6 @@ const StyledLink = styled(Link)`
   letter-spacing: 0.3rem;
   text-align: center;
   text-decoration: none;
-
-  &:hover ${StyledImage} {
-    filter: brightness(1.2);
-  }
 `;
 
 const StyledArrow = styled(FiChevronRight)`

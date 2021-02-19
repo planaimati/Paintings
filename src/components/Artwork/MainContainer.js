@@ -21,6 +21,7 @@ const StyledImagesWrapper = styled.div`
   @media (max-width: 480px) {
     flex-direction: column;
     height: 100%;
+    width: 80vw;
   }
 `;
 

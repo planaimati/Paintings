@@ -9,7 +9,7 @@ const StyledContainer = styled.div`
   min-height: 100vh;
   width: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: center;
   @media (max-width: 480px) {
     flex-direction: column;

@@ -30,7 +30,7 @@ const StyledHeaderContainer = styled.div`
   align-items: center;
   justify-content: cener;
   height: 100%;
-  width: 40%;
+  width: 35rem;
 
   @media (max-width: 730px) {
     width: 100%;
@@ -51,12 +51,12 @@ const StyledTextContainer = styled.div`
 `;
 
 const StyledNavHeader = styled(Link)`
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   color: black;
   font-family: "Nunito", sans-serif;
   letter-spacing: 0.1rem;
   text-decoration: none;
-  font-weight: 200;
+  font-weight: 300;
 `;
 
 const StyledNavHeaderSmall = styled.h4`
@@ -64,7 +64,7 @@ const StyledNavHeaderSmall = styled.h4`
   font-family: "Nunito", sans-serif;
   letter-spacing: 0.55rem;
   font-weight: 300;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: #526163;
 `;
 
@@ -85,7 +85,7 @@ const StyledList = styled.ul`
   align-items: center;
   list-style: none;
   grid-column: 2/-1;
-  justify-content: space-around;
+  justify-content: space-between;
 
   @media (max-width: 480px) {
     width: 98%;
@@ -99,7 +99,7 @@ const StyledLink = styled.li`
 const StyledNavLink = styled(NavLink)`
   width: 100%;
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   text-transform: capitalize;
   color: ${(props) => props.theme.color.fontDark};
   font-weight: 300;

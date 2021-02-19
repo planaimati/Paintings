@@ -37,7 +37,6 @@ const StyledContainer = styled.div`
 
 const PicturesWrapper = styled.div`
   margin-top: 2rem;
-  height: 80%;
   width: 40%;
   display: flex;
   align-items: center;
@@ -99,7 +98,7 @@ const LongText = styled(StyledText)`
 
 const StyledImageWrapper = styled.div`
   height: 70%;
-  width: 30rem;
+  width: 60rem;
 `;
 
 const StyledImage = styled.img`

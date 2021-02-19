@@ -42,21 +42,21 @@ export const images = [
             title: "daleka podróż",
             seriesName: "terra incognita",
 
-            images: [Obraz1, Obraz2, Obraz4],
+            images: [Obraz5, Obraz2, Obraz4],
           },
           {
             id: 5,
             title: "daleka podróż",
             seriesName: "terra incognita",
 
-            images: [Obraz1, Obraz2, Obraz4],
+            images: [Obraz5, Obraz2, Obraz4],
           },
           {
             id: 6,
             title: "daleka podróż",
             seriesName: "terra incognita",
 
-            images: [Obraz1, Obraz2, Obraz4],
+            images: [Obraz5, Obraz2, Obraz4],
           },
         ],
       },
@@ -71,7 +71,7 @@ export const images = [
             seriesName: "mini",
 
             images: [
-              Obraz6,
+              Obraz2,
               "https://images.pexels.com/photos/3016038/pexels-photo-3016038.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
               "https://images.pexels.com/photos/1572386/pexels-photo-1572386.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
             ],
@@ -93,7 +93,7 @@ export const images = [
             seriesName: "mini",
 
             images: [
-              Obraz6,
+              Obraz2,
               "https://images.pexels.com/photos/3016038/pexels-photo-3016038.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
               "https://images.pexels.com/photos/1572386/pexels-photo-1572386.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
             ],
