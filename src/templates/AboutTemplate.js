@@ -26,6 +26,7 @@ const StyledContentWrapper = styled.div`
 const StyledPictureWrapper = styled.div`
   height: 50rem;
   width: 50rem;
+  margin-bottom: 2rem;
 `;
 
 const StyledPicture = styled.img`
