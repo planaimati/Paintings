@@ -6,7 +6,6 @@ export const AppContextProvider = ({ children }) => {
   //state
   const [activeMenu, setActiveMenu] = useState(0);
   const [galleryItems, setGalleryItems] = useState(images);
-  const [index, setIndex] = useState(0);
   const [imageIndex, setImageIndex] = useState(0);
   const [scrollTop, setScrollTop] = useState(0);
 
@@ -16,32 +15,14 @@ export const AppContextProvider = ({ children }) => {
     setGalleryItems(images);
   }, []);
 
-  //zmiana indeksu dla obrazków w SmallGallery
-
   const toggleScroll = () => {
     setScrollTop((prevState) => (prevState = window.pageYOffset));
   };
 
-  //
+  //single image gallery
 
   const toggleSetImageIndex = (x) => {
     setImageIndex((prevState) => (prevState = x));
-  };
-
-  //galeria obrazów dla pojedyńczego itemu
-
-  const toggleSetIndexIncrease = () => {
-    if (index === 2) {
-      setIndex(-1);
-    }
-    setIndex((prevState) => prevState + 1);
-  };
-
-  const toggleSetIndexDecrease = () => {
-    if (index === 0) {
-      setIndex(3);
-    }
-    setIndex((prevState) => prevState + -1);
   };
 
   // menu settings
@@ -62,9 +43,6 @@ export const AppContextProvider = ({ children }) => {
         toggleSetActiveMenu,
 
         galleryItems,
-        index,
-        toggleSetIndexIncrease,
-        toggleSetIndexDecrease,
 
         toggleSetImageIndex,
         imageIndex,

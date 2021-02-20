@@ -7,8 +7,9 @@ const TextContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 5rem;
-  width: 70%;
-  @media (max-width: 480px) {
+  width: 100rem;
+
+  @media (max-width: 1024px) {
     width: 90%;
   }
 `;

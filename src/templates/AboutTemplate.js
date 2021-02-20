@@ -4,6 +4,7 @@ import Header from "../components/MainHeader";
 import LongText from "../components/Text/LongText";
 import Image from "../components/Text/Image";
 import Container from "../components/Text/Container";
+import portret from "../assets/img/portret.jpg";
 
 const StyledWrapper = styled.div`
   min-height: 100vh;
@@ -22,11 +23,21 @@ const StyledContentWrapper = styled.div`
   margin-top: 17vh;
 `;
 
+const StyledPictureWrapper = styled.div`
+  height: 50rem;
+  width: 50rem;
+`;
+
+const StyledPicture = styled.img`
+  height: 100%;
+  width: 100%;
+`;
+
 const AboutTemplate = (props) => {
   return (
     <StyledWrapper>
       <StyledContentWrapper>
-        <Image img="https://images.pexels.com/photos/735199/pexels-photo-735199.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"></Image>
+        <Image img="https://cdn.pixabay.com/photo/2020/11/06/15/38/woman-5718129_960_720.jpg"></Image>
         <Container>
           <Header size="2.5">About Me</Header>
           <LongText>
@@ -61,6 +72,9 @@ const AboutTemplate = (props) => {
             repellendus eius alias eos?
           </LongText>
         </Container>
+        <StyledPictureWrapper>
+          <StyledPicture src={portret}></StyledPicture>
+        </StyledPictureWrapper>
       </StyledContentWrapper>
     </StyledWrapper>
   );

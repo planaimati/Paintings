@@ -6,6 +6,7 @@ const theme = {
     mainDark: "#1D1D1D",
     mainLight: "#ECECEC",
     fontDark: "#526163",
+    footerLightColor: "#F2F2F2",
   },
 };
 

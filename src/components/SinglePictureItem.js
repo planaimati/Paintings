@@ -5,7 +5,6 @@ import { AppContext } from "../context/context";
 import MainHeader from "./MainHeader";
 
 const StyledWrapper = styled.div`
-  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -15,7 +14,7 @@ const StyledWrapper = styled.div`
 `;
 const StyledContainer = styled.div`
   margin-top: 15vh;
-  height: 130vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -37,14 +36,19 @@ const StyledContainer = styled.div`
 
 const PicturesWrapper = styled.div`
   margin-top: 2rem;
-  width: 40%;
+  width: 50%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   flex-direction: column;
   margin-bottom: 5rem;
+  @media (max-width: 730px) {
+    width: 90%;
+    align-items: center;
+  }
   @media (max-width: 480px) {
     width: 100%;
+    align-items: center;
   }
 `;
 
@@ -58,21 +62,35 @@ const StyledLine = styled.div`
 const DescWrapper = styled.div`
   margin-top: 2rem;
   height: 80%;
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   margin-bottom: 5rem;
+  @media (max-width: 730px) {
+    width: 90%;
+  }
+  @media (max-width: 480px) {
+    width: 90%;
+  }
 `;
 
 const TextWrapper = styled.div`
   height: 50%;
   display: flex;
-  width: 100%;
+  width: 60%;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  @media (max-width: 730px) {
+    width: 100%;
+    align-items: center;
+  }
+  @media (max-width: 480px) {
+    align-items: flex-start;
+    width: 100%;
+  }
 `;
 
 const StyledText = styled.span`
@@ -97,8 +115,14 @@ const LongText = styled(StyledText)`
 `;
 
 const StyledImageWrapper = styled.div`
-  height: 70%;
-  width: 60rem;
+  height: 60vh;
+  width: 35rem;
+  margin-right: 2rem;
+  @media (max-width: 480px) {
+    margin-right: 0;
+    width: 90%;
+    height: 85vh;
+  }
 `;
 
 const StyledImage = styled.img`
@@ -113,12 +137,29 @@ const StyledImageSmallWrapper = styled.div`
   width: 35rem;
   align-items: center;
   justify-content: space-between;
+  margin-right: 2rem;
+  @media (max-width: 480px) {
+    margin-right: 0;
+  }
 `;
 
-const StyledImageSmall = styled.img`
+const StyledImageSmall1 = styled.img`
   height: 15rem;
   width: 10rem;
+  cursor: pointer;
   border-radius: 3px;
+
+  &:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+  }
+  border: ${(props) => (props.active === 0 ? "2px solid #222222" : "none")};
+`;
+const StyledImageSmall2 = styled(StyledImageSmall1)`
+  border: ${(props) => (props.active === 1 ? "2px solid #222222" : "none")};
+`;
+const StyledImageSmall3 = styled(StyledImageSmall1)`
+  border: ${(props) => (props.active === 2 ? "2px solid #222222" : "none")};
 `;
 
 const SinglePictureItem = (props) => {
@@ -146,18 +187,21 @@ const SinglePictureItem = (props) => {
             <StyledImage src={picture.images[imageIndex]} alt="" />
           </StyledImageWrapper>
           <StyledImageSmallWrapper>
-            <StyledImageSmall
+            <StyledImageSmall1
               src={picture.images[0]}
               onClick={() => toggleSetImageIndex(0)}
-            ></StyledImageSmall>
-            <StyledImageSmall
+              active={imageIndex}
+            ></StyledImageSmall1>
+            <StyledImageSmall2
               src={picture.images[1]}
               onClick={() => toggleSetImageIndex(1)}
-            ></StyledImageSmall>
-            <StyledImageSmall
+              active={imageIndex}
+            ></StyledImageSmall2>
+            <StyledImageSmall3
               src={picture.images[2]}
               onClick={() => toggleSetImageIndex(2)}
-            ></StyledImageSmall>
+              active={imageIndex}
+            ></StyledImageSmall3>
           </StyledImageSmallWrapper>
         </PicturesWrapper>
 

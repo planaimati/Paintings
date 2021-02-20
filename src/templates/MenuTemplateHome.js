@@ -78,10 +78,10 @@ const StyledLink = styled.li`
 const StyledNavLink = styled(NavLink)`
   width: 100%;
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   text-transform: capitalize;
   color: white;
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: 0.3rem;
   font-family: "Nunito", sans-serif;
   transition: 0.3s;
@@ -104,7 +104,7 @@ const MenuTemplateHome = () => {
       </StyledHeaderContainer>
       <StyledList>
         <StyledLink>
-          <StyledNavLink to="/about">About</StyledNavLink>
+          <StyledNavLink to="/about">Bio</StyledNavLink>
         </StyledLink>
         <StyledLink>
           <StyledNavLink to="/gallery2D">Artwork 2D</StyledNavLink>

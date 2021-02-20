@@ -20,7 +20,7 @@ const StyledWrapper = styled.div`
   }
 `;
 
-const StyledImage = styled.div`
+const StyledImage = styled(Link)`
   width: 100%;
   height: 100%;
   background-image: url(${(props) => props.img});
@@ -29,6 +29,13 @@ const StyledImage = styled.div`
   background-repeat: no-repeat;
   border-radius: 3px;
   opacity: 1;
+  transition: 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+  }
 `;
 
 const StyledTextContainer = styled.div`
@@ -39,7 +46,7 @@ const StyledTextContainer = styled.div`
   align-items: center;
 `;
 
-const StyledLink = styled(Link)`
+const StyledDesc = styled.p`
   font-family: "Nunito", sans-serif;
   text-transform: uppercase;
   font-size: 1.8rem;
@@ -60,11 +67,12 @@ const ArtworkItem = (props) => {
 
   return (
     <StyledWrapper>
-      <StyledImage img={props.categoryImg}></StyledImage>
+      <StyledImage
+        img={props.categoryImg}
+        to={`${location.pathname}/${props.category}`}
+      ></StyledImage>
       <StyledTextContainer>
-        <StyledLink to={`${location.pathname}/${props.category}`}>
-          {props.category}
-        </StyledLink>
+        <StyledDesc>{props.category}</StyledDesc>
         <StyledArrow />
       </StyledTextContainer>
     </StyledWrapper>

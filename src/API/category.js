@@ -139,8 +139,7 @@ export const images = [
     //kategoria glass painting
     id: 2,
     category: "glass painting",
-    categoryImg:
-      "https://images.pexels.com/photos/674837/pexels-photo-674837.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    categoryImg: Obraz6,
     series: [],
   },
   {

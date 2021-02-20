@@ -160,7 +160,7 @@ const MenuTemplate = () => {
                 onClick={toggleSetActiveMenu}
                 activeClassName="active"
               >
-                About
+                Bio
               </StyledNavLink>
             </StyledLink>
             <StyledLink>

@@ -12,6 +12,7 @@ import AboutView from "./AboutView";
 import MenuTemplate from "../templates/MenuTemplate";
 import PicturesView from "./PicturesView";
 import SinglePictureItem from "../components/SinglePictureItem";
+import Footer from "./FooterView";
 //import Burger from "../components/Burger";
 //import { useLocation } from "react-router-dom";
 
@@ -26,6 +27,7 @@ const Root = () => {
       <BrowserRouter>
         <GlobalStyle />
         <MenuTemplate></MenuTemplate>
+        <Footer></Footer>
 
         <Switch>
           <Route exact path="/" component={HomeView}></Route>

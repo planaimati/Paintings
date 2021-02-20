@@ -10,8 +10,8 @@ const StyledText = styled.p`
   line-height: 2.8rem;
   letter-spacing: 0.1rem;
   word-wrap: break-word;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 `;
 
 const LongText = (props) => {
