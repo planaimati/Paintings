@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Header from "../components/MainHeader";
 import Image from "../components/Text/Image";
 import Container from "../components/Text/Container";
-import Footer from "../components/Footer";
 
 const StyledWrapper = styled.div`
   min-height: 100vh;
