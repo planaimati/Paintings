@@ -4,7 +4,8 @@ import Header from "../components/MainHeader";
 import LongText from "../components/Text/LongText";
 import Image from "../components/Text/Image";
 import Container from "../components/Text/Container";
-import portret from "../assets/img/portret.jpg";
+import Line from "../components/Line";
+import Footer from "../components/Footer";
 
 const StyledWrapper = styled.div`
   min-height: 100vh;
@@ -21,17 +22,6 @@ const StyledContentWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-top: 17vh;
-`;
-
-const StyledPictureWrapper = styled.div`
-  height: 50rem;
-  width: 50rem;
-  margin-bottom: 2rem;
-`;
-
-const StyledPicture = styled.img`
-  height: 100%;
-  width: 100%;
 `;
 
 const AboutTemplate = (props) => {
@@ -73,9 +63,8 @@ const AboutTemplate = (props) => {
             repellendus eius alias eos?
           </LongText>
         </Container>
-        <StyledPictureWrapper>
-          <StyledPicture src={portret}></StyledPicture>
-        </StyledPictureWrapper>
+        <Line></Line>
+        <Footer></Footer>
       </StyledContentWrapper>
     </StyledWrapper>
   );

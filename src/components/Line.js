@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
+
 const StyledLine = styled.div`
-  height: 2px;
-  width: 80%;
+  height: 0.01rem;
+  width: 60%;
   background-color: grey;
-  margin-bottom: 3rem;
+  margin: 4rem 0 4rem 0;
 `;
 
 const Line = () => {

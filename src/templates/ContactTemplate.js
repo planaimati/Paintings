@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Header from "../components/MainHeader";
 import Image from "../components/Text/Image";
 import Container from "../components/Text/Container";
-
+import Footer from "../components/Footer";
 
 const StyledWrapper = styled.div`
   min-height: 100vh;
@@ -47,7 +47,7 @@ const ContactTemplate = () => {
           <Text>Thinking about booking a private session?</Text>
           <Text>
             Please do not hesitate to reach out for any reason -- email, call,
-            text, or just fill out the form below and hit "submit".
+            or text.
           </Text>
           <Text>email: szpecht_art@gmail.com</Text>
           <Text>phone: (+48) 796-506-223</Text>
